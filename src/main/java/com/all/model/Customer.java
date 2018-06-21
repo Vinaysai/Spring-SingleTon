@@ -1,59 +1,58 @@
 package com.all.model;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
 public class Customer {
 
-	private String firstname;
-	private String lastname;
-
-	public String getFirstname() {
-		return firstname;
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((firstname == null) ? 0 : firstname.hashCode());
-		result = prime * result + ((lastname == null) ? 0 : lastname.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Customer other = (Customer) obj;
-		if (firstname == null) {
-			if (other.firstname != null)
-				return false;
-		} else if (!firstname.equals(other.firstname))
-			return false;
-		if (lastname == null) {
-			if (other.lastname != null)
-				return false;
-		} else if (!lastname.equals(other.lastname))
-			return false;
-		return true;
-	}
-
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-
-	public String getLastname() {
-		return lastname;
-	}
-
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
+	private Set addressSet;
+	private List addressList;
+	private Map addressMap;
+	private Properties addressProp;
 
 	public Customer() {
+		super();
+	}
 
+	public List getAddressList() {
+		System.out.println("List Elements :" + addressList);
+		return addressList;
+	}
+
+	public Map getAddressMap() {
+		System.out.println("Map Elements :" + addressMap);
+
+		return addressMap;
+	}
+
+	public Properties getAddressProp() {
+		System.out.println("Property Elements :" + addressMap);
+
+		return addressProp;
+	}
+
+	public Set getAddressSet() {
+		System.out.println("Set Elements :" + addressSet);
+
+		return addressSet;
+	}
+
+	public void setAddressList(List addressList) {
+		this.addressList = addressList;
+	}
+
+	public void setAddressMap(Map addressMap) {
+		this.addressMap = addressMap;
+	}
+
+	public void setAddressProp(Properties addressProp) {
+		this.addressProp = addressProp;
+	}
+
+	public void setAddressSet(Set addressSet) {
+		this.addressSet = addressSet;
 	}
 
 }

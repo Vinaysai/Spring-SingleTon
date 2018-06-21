@@ -3,8 +3,7 @@ package com.all.main;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.all.service.CustomerService;
-import com.all.service.CustomerServiceImpl;
+import com.all.model.Customer;
 
 public class Application {
 
@@ -12,14 +11,15 @@ public class Application {
 
 		// CustomerService service = new CustomerServiceImpl();
 
+		@SuppressWarnings("resource")
 		ApplicationContext appCtx = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-		CustomerService service = appCtx.getBean("customerservice", CustomerService.class);
+		Customer cust = (Customer) appCtx.getBean("Customer");
+		cust.getAddressList();
+		cust.getAddressSet();
+		cust.getAddressMap();
+		cust.getAddressProp();
 
-		System.out.println(service.findAll().get(0).getFirstname());
-		System.out.println(service.findAll().get(0).getLastname());
-
-		System.out.println("Spring 4.2.0 Release final.");
 	}
 
 }
