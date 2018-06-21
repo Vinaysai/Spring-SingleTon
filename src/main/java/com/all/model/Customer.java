@@ -1,58 +1,32 @@
 package com.all.model;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-
 public class Customer {
 
-	private Set addressSet;
-	private List addressList;
-	private Map addressMap;
-	private Properties addressProp;
+	private String message;
+	private String privatemessage;
 
 	public Customer() {
 		super();
 	}
 
-	public List getAddressList() {
-		System.out.println("List Elements :" + addressList);
-		return addressList;
+	public String getMessage() {
+		System.out.println("Your Message : " + message);
+
+		return message;
 	}
 
-	public Map getAddressMap() {
-		System.out.println("Map Elements :" + addressMap);
+	public String getPrivatemessage() {
+		System.out.println("Your PrivateMessage : " + privatemessage);
 
-		return addressMap;
+		return privatemessage;
 	}
 
-	public Properties getAddressProp() {
-		System.out.println("Property Elements :" + addressMap);
-
-		return addressProp;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
-	public Set getAddressSet() {
-		System.out.println("Set Elements :" + addressSet);
-
-		return addressSet;
-	}
-
-	public void setAddressList(List addressList) {
-		this.addressList = addressList;
-	}
-
-	public void setAddressMap(Map addressMap) {
-		this.addressMap = addressMap;
-	}
-
-	public void setAddressProp(Properties addressProp) {
-		this.addressProp = addressProp;
-	}
-
-	public void setAddressSet(Set addressSet) {
-		this.addressSet = addressSet;
+	public void setPrivatemessage(String privatemessage) {
+		this.privatemessage = privatemessage;
 	}
 
 }
